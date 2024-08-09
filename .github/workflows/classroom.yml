@@ -125,9 +125,19 @@ jobs:
         comparison-method: exact
         timeout: 10
         max-score: 10
+    - name: run
+      id: run
+      uses: classroom-resources/autograding-command-grader@v1
+      with:
+        test-name: run
+        setup-command: ''
+        command: node main.js
+        timeout: 10
+        max-score: 10
     - name: Autograding Reporter
       uses: classroom-resources/autograding-grading-reporter@v1
       env:
         FIZZBUZZ_TEST_RESULTS: "${{steps.fizzbuzz_test.outputs.result}}"
+        RUN_RESULTS: "${{steps.run.outputs.result}}"
       with:
-        runners: fizzbuzz_test
+        runners: fizzbuzz_test,run
