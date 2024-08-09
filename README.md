@@ -6,6 +6,7 @@ Write a program that uses console.log to print all the numbers from 1 to 100, wi
   - For numbers divisible by 3 but not divisible by 5, print `Fizz`
   - For numbers divisible by 5 but not divisible by 3, print `Buzz`
   - Other cases, just print the number.
+ 
 
 ## Example:
   - Number `1` is not divisible by 3 and 5: `1`
